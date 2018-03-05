@@ -41,21 +41,13 @@ app.post('/update', function(req, res) {
     });
 });
 
-/*app.listen(app.get('port'), function () {
+app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });
-var records = [];
+/*var records = [];
 conn.query("SELECT Id,Phone, MobilePhone, FirstName, LastName, Email FROM Contact", function(err,conn,result) {
   if (err) { return console.error(err); }
   console.log("total : " + result.totalSize);
   console.log("fetched : " + result.records.length);
 });*/
-app.listen(app.get('port'), function () {
-    console.log('Express server listening on port ' + app.get('port'));
-    pg.connect(process.env.DATABASE_URL, function (err, conn, done) {
-    if (app.get('port')) {
-    conn.query('SELECT Id,Phone, MobilePhone, FirstName, LastName, Email FROM salesforce.Contact)',
-    done();
-    console.log(res.json(result));
-    }
-});
+
