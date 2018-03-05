@@ -41,28 +41,7 @@ app.post('/update', function(req, res) {
     });
 });
 
-/*app.listen(app.get('port'), function () {
-    console.log('Express server listening on port ' + app.get('port'));
-});*/
 app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
-    if (app.get('port')) {
-                  conn.query('SELECT Id,Phone, MobilePhone, FirstName, LastName, Email FROM salesforce.Contact)',
-                  
-                  function(err, result) {
-                    done();
-                    if (err) {
-                        res.status(400).json({error: err.message});
-                    }
-                    else {
-                        // this will still cause jquery to display 'Record updated!'
-                        // eventhough it was inserted
-                        console.log(res.json(result));
-                    }
-                  });
-                }
-                else {
-                    done();
-                    console.log(res.json(result));
-                }
 });
+
