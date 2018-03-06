@@ -55,7 +55,7 @@ pg.connect(process.env.DATABASE_URL, function (err, conn, done) {
   if (err) throw err;
   conn.query("SELECT * FROM salesforce.Contact", function (err, result, fields) {
     if (err) throw err;
-    res.json(result);
+    done.json(result);
     console.log(result);
   });
 });
