@@ -35,6 +35,14 @@ app.post('/update', function(req, res) {
                 else {
                     done();
                     res.json(result);
+                     conn.query("SELECT Id,Phone, MobilePhone, FirstName, LastName, Email FROM Contact FROM salesforce.Contact", function (err, result, fields) {
+    if (err) throw err;
+    res.json(result);
+    console.log(result);
+    console.log('Node area run');
+    var obj = {};
+    console.log('body: ' + JSON.stringify(result));
+res.send('body: ' + JSON.stringify(result))
                 }
             }
         );
