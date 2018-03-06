@@ -57,6 +57,7 @@ pg.connect(process.env.DATABASE_URL, function (err, conn, done) {
     if (err) throw err;
     res.json(result);
     console.log(result);
+    console.log('Node area run');
   });
 });
 });
