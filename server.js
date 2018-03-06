@@ -50,13 +50,14 @@ conn.query("SELECT Id,Phone, MobilePhone, FirstName, LastName, Email FROM Contac
   console.log("total : " + result.totalSize);
   console.log("fetched : " + result.records.length);
 });*/
-
+app.get('/', function (req, res) {
 pg.connect(process.env.DATABASE_URL, function (err, conn, done) {
   if (err) throw err;
   conn.query("SELECT * FROM salesforce.Contact", function (err, result, fields) {
     if (err) throw err;
-    done.json(result);
+    res.json(result);
     console.log(result);
   });
+});
 });
 
