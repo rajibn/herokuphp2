@@ -64,10 +64,6 @@
                     e.preventDefault();
                     console.log('load_data clicked');
                     
-                    var data = {};
-                    data.title = "title";
-                    data.message = "message";
-                    
                     $.ajax({
                         type: 'GET',
                         data: JSON.stringify(data),
