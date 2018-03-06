@@ -35,7 +35,6 @@ app.post('/update', function(req, res) {
                 else {
                     done();
                     res.json(result);
-                     
                 }
             }
         );
