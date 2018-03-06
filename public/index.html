@@ -63,7 +63,7 @@
             $('#load_data').click(function(e){
                     e.preventDefault();
                     console.log('load_data clicked');
-                    
+                    var data = {};
                     $.ajax({
                         type: 'GET',
                         data: JSON.stringify(data),
