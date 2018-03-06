@@ -52,10 +52,10 @@ conn.query("SELECT Id,Phone, MobilePhone, FirstName, LastName, Email FROM Contac
 });*/
 
 pg.connect(process.env.DATABASE_URL, function (err, conn, done) {
-  if (err) throw err;
+  /*if (err) throw err;
   con.query("SELECT * FROM salesforce.Contact", function (err, result, fields) {
     if (err) throw err;
     console.log(result);
-  });
+  });*/
 });
 
